@@ -9,10 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private let apiKey = "5786655e02ffc23d1afcd630edc67bb3"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
+        let forcastURL = NSURL(string: "38.897193, -77.025013", relativeToURL: baseURL)
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
