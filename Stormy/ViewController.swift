@@ -20,8 +20,6 @@ class ViewController: UIViewController {
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
         let forcastURL = NSURL(string: "38.897193, -77.025013", relativeToURL: baseURL)
         
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
