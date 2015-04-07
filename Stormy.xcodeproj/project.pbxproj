@@ -13,6 +13,7 @@
 		D3093E771AD1F468002CEE69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3093E761AD1F468002CEE69 /* Images.xcassets */; };
 		D3093E7A1AD1F468002CEE69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3093E781AD1F468002CEE69 /* LaunchScreen.xib */; };
 		D3093E861AD1F468002CEE69 /* StormyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3093E851AD1F468002CEE69 /* StormyTests.swift */; };
+		D30D83B61AD204BB00A8256C /* example_code.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D83B51AD204BB00A8256C /* example_code.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D3093E7F1AD1F468002CEE69 /* StormyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StormyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3093E841AD1F468002CEE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3093E851AD1F468002CEE69 /* StormyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormyTests.swift; sourceTree = "<group>"; };
+		D30D83B51AD204BB00A8256C /* example_code.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = example_code.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				D3093E761AD1F468002CEE69 /* Images.xcassets */,
 				D3093E781AD1F468002CEE69 /* LaunchScreen.xib */,
 				D3093E6D1AD1F468002CEE69 /* Supporting Files */,
+				D30D83B51AD204BB00A8256C /* example_code.swift */,
 			);
 			path = Stormy;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3093E721AD1F468002CEE69 /* ViewController.swift in Sources */,
+				D30D83B61AD204BB00A8256C /* example_code.swift in Sources */,
 				D3093E701AD1F468002CEE69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +409,7 @@
 				D3093E8B1AD1F468002CEE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3093E8C1AD1F468002CEE69 /* Build configuration list for PBXNativeTarget "StormyTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				D3093E8E1AD1F468002CEE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
