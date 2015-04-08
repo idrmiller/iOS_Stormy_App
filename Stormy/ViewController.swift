@@ -24,8 +24,16 @@ class ViewController: UIViewController {
             weatherData object using NSDATA. At this stage the results are shown in hex code. We 
             demonstrated this by inputinh println after the code. 
         */
-        let weatherData = NSData(contentsOfURL: forcastURL!, options: nil, error: nil)
-        println(weatherData)
+        
+        //  We are creating a singeleton to allow this session to manage our whole app.
+        //  We are using a closure to make a asynchronous call so we can capture the reference to the variables when the task completes in the background.
+        
+        let sharedSession = NSURLSession.sharedSession()
+        let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(forcastURL!, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+            println(response)
+        })
+        
+        downloadTask.resume()
     }
 
     override func didReceiveMemoryWarning() {
