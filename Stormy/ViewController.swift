@@ -29,13 +29,16 @@ class ViewController: UIViewController {
             
             // We added this if statment to aid ensure our code does nto break. This allows us to explicitly handel the error.
             if (error == nil) {
+                
                 //  The (location) identified in this parameter is the location on the disc
                 let dataObject = NSData(contentsOfURL: location)
                 
                 // This bit of code is to help convert our dataObject to JSOn to make it readable.
                 let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
                 
-                println(weatherDictionary)
+                println(weatherDictionary) 
+                
+                
             }
             
         })
