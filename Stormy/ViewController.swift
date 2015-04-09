@@ -27,9 +27,16 @@ class ViewController: UIViewController {
         let sharedSession = NSURLSession.sharedSession()
         let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(forcastURL!, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
             
-            var urlContents = NSString(contentsOfURL: forcastURL!, encoding: NSUTF8StringEncoding, error: nil)
-            
-            println(urlContents)
+            // We added this if statment to aid ensure our code does nto break. This allows us to explicitly handel the error.
+            if (error == nil) {
+                //  The (location) identified in this parameter is the location on the disc
+                let dataObject = NSData(contentsOfURL: location)
+                
+                // This bit of code is to help convert our dataObject to JSOn to make it readable.
+                let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
+                
+                println(weatherDictionary)
+            }
             
         })
         
