@@ -20,17 +20,17 @@ class ViewController: UIViewController {
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
         let forcastURL = NSURL(string: "38.897193,-77.025013", relativeToURL: baseURL)
         
-        /* The code below shows the ability to extract the data from the api and store it in the 
-            weatherData object using NSDATA. At this stage the results are shown in hex code. We 
-            demonstrated this by inputinh println after the code. 
-        */
-        
         //  We are creating a singeleton to allow this session to manage our whole app.
         //  We are using a closure to make a asynchronous call so we can capture the reference to the variables when the task completes in the background.
+        // The location:NSURL is the location where the information is saved
         
         let sharedSession = NSURLSession.sharedSession()
         let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(forcastURL!, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
-            println(response)
+            
+            var urlContents = NSString(contentsOfURL: forcastURL!, encoding: NSUTF8StringEncoding, error: nil)
+            
+            println(urlContents)
+            
         })
         
         downloadTask.resume()
