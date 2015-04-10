@@ -36,8 +36,10 @@ class ViewController: UIViewController {
                 // This bit of code is to help convert our dataObject to JSOn to make it readable.
                 let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
                 
-                println(weatherDictionary) 
+                let currentWeatherDictionary: NSDictionary = weatherDictionary["currently"] as NSDictionary
                 
+                //  This is a bad implementation
+                println(currentWeatherDictionary["temperature"])
                 
             }
             
