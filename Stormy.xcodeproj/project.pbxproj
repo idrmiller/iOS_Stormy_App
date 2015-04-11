@@ -14,6 +14,7 @@
 		D3093E7A1AD1F468002CEE69 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3093E781AD1F468002CEE69 /* LaunchScreen.xib */; };
 		D3093E861AD1F468002CEE69 /* StormyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3093E851AD1F468002CEE69 /* StormyTests.swift */; };
 		D30D83B61AD204BB00A8256C /* example_code.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D83B51AD204BB00A8256C /* example_code.swift */; };
+		D30D83B81AD764ED00A8256C /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D83B71AD764ED00A8256C /* Current.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		D3093E841AD1F468002CEE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3093E851AD1F468002CEE69 /* StormyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormyTests.swift; sourceTree = "<group>"; };
 		D30D83B51AD204BB00A8256C /* example_code.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = example_code.swift; sourceTree = "<group>"; };
+		D30D83B71AD764ED00A8256C /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				D3093E6F1AD1F468002CEE69 /* AppDelegate.swift */,
 				D3093E711AD1F468002CEE69 /* ViewController.swift */,
+				D30D83B71AD764ED00A8256C /* Current.swift */,
 				D3093E731AD1F468002CEE69 /* Main.storyboard */,
 				D3093E761AD1F468002CEE69 /* Images.xcassets */,
 				D3093E781AD1F468002CEE69 /* LaunchScreen.xib */,
@@ -218,6 +221,7 @@
 				D3093E721AD1F468002CEE69 /* ViewController.swift in Sources */,
 				D30D83B61AD204BB00A8256C /* example_code.swift in Sources */,
 				D3093E701AD1F468002CEE69 /* AppDelegate.swift in Sources */,
+				D30D83B81AD764ED00A8256C /* Current.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

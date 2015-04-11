@@ -36,12 +36,28 @@ class ViewController: UIViewController {
                 // This bit of code is to help convert our dataObject to JSOn to make it readable.
                 let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
                 
-                let currentWeatherDictionary: NSDictionary = weatherDictionary["currently"] as NSDictionary
-                
-                //  This is a bad implementation
-                println(currentWeatherDictionary["temperature"])
+               let currentWeather = Current(weatherDictionary: weatherDictionary)
+                println(currentWeather.temperature)
                 
             }
+            
+            
+            //  This section is focused on converting the time from the api to standard presented time.
+            func dateStringFromUnixTime(unixTime: Int) -> String {
+                
+                let timeInSeconds = NSTimeInterval(unixTime)
+                let weatherDate = NSDate(timeIntervalSince1970: timeInSeconds)
+                
+                // Lets us convert the date object into strings and vice versa
+                //   we can also style the date
+                let dateFormater = NSDateFormatter()
+                dateFormater.timeStyle = .ShortStyle
+                
+                return dateFormater.stringFromDate(weatherDate)
+                
+            }
+            
+            
             
         })
         
