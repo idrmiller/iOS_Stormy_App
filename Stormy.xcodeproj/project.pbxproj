@@ -81,9 +81,10 @@
 		D3093E6C1AD1F468002CEE69 /* Stormy */ = {
 			isa = PBXGroup;
 			children = (
+				D30D83B91AD9961500A8256C /* Model */,
+				D30D83BA1AD9962200A8256C /* View */,
+				D30D83BB1AD9962D00A8256C /* Controller */,
 				D3093E6F1AD1F468002CEE69 /* AppDelegate.swift */,
-				D3093E711AD1F468002CEE69 /* ViewController.swift */,
-				D30D83B71AD764ED00A8256C /* Current.swift */,
 				D3093E731AD1F468002CEE69 /* Main.storyboard */,
 				D3093E761AD1F468002CEE69 /* Images.xcassets */,
 				D3093E781AD1F468002CEE69 /* LaunchScreen.xib */,
@@ -116,6 +117,29 @@
 				D3093E841AD1F468002CEE69 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D30D83B91AD9961500A8256C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D30D83B71AD764ED00A8256C /* Current.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D30D83BA1AD9962200A8256C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D30D83BB1AD9962D00A8256C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3093E711AD1F468002CEE69 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
