@@ -72,6 +72,21 @@
                                     <constraint firstAttribute="width" constant="60" id="Ujk-Gx-aJa"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rl0-iq-9AZ">
+                                <rect key="frame" x="139" y="40" width="43" height="43"/>
+                                <state key="normal" image="refresh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aBI-LR-CsV"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Zn5-FQ-0kb">
+                                <rect key="frame" x="150" y="52" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degree" translatesAutoresizingMaskIntoConstraints="NO" id="evv-57-DJ0">
+                                <rect key="frame" x="268" y="206" width="36" height="36"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -84,14 +99,20 @@
                             <constraint firstItem="QMK-LQ-VzW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="47" id="U08-ID-XBZ"/>
                             <constraint firstAttribute="centerY" secondItem="jWg-rp-pvk" secondAttribute="centerY" id="X2N-rw-YUs"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BBj-hb-sxc" secondAttribute="bottom" constant="177" id="YdJ-6v-RTZ"/>
+                            <constraint firstItem="kJx-Ot-hgv" firstAttribute="top" secondItem="Rl0-iq-9AZ" secondAttribute="bottom" constant="26" id="YsM-Je-qKn"/>
+                            <constraint firstItem="Rl0-iq-9AZ" firstAttribute="centerX" secondItem="Zn5-FQ-0kb" secondAttribute="centerX" id="apo-Qb-Qu1"/>
                             <constraint firstAttribute="centerX" secondItem="tq7-oU-G7H" secondAttribute="centerX" constant="-0.5" id="fB6-Bu-OpQ"/>
                             <constraint firstItem="kJx-Ot-hgv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="jZv-Pp-uoG"/>
                             <constraint firstItem="kJx-Ot-hgv" firstAttribute="leading" secondItem="YYE-w4-beR" secondAttribute="trailing" constant="5" id="kbE-Hj-aOs"/>
+                            <constraint firstAttribute="centerX" secondItem="Rl0-iq-9AZ" secondAttribute="centerX" id="lNg-jF-eJP"/>
                             <constraint firstAttribute="centerX" secondItem="YYE-w4-beR" secondAttribute="centerX" constant="92" id="oQz-Te-1Cu"/>
+                            <constraint firstItem="Rl0-iq-9AZ" firstAttribute="centerY" secondItem="Zn5-FQ-0kb" secondAttribute="centerY" constant="-0.5" id="pC9-A0-m7L"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LX0-J8-HV8" secondAttribute="trailing" constant="36" id="pP8-1K-xCc"/>
                             <constraint firstAttribute="centerX" secondItem="jWg-rp-pvk" secondAttribute="centerX" constant="-0.5" id="q2t-IV-fyg"/>
+                            <constraint firstItem="jWg-rp-pvk" firstAttribute="top" secondItem="evv-57-DJ0" secondAttribute="bottom" constant="-44" id="qNm-bF-zp1"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QH7-4t-vaH" secondAttribute="bottom" constant="177" id="vDq-zG-lse"/>
                             <constraint firstItem="jWg-rp-pvk" firstAttribute="top" secondItem="tq7-oU-G7H" secondAttribute="bottom" constant="-17" id="w92-gh-jLD"/>
+                            <constraint firstItem="evv-57-DJ0" firstAttribute="leading" secondItem="jWg-rp-pvk" secondAttribute="trailing" constant="-18" id="wTq-Y4-fpV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QH7-4t-vaH" secondAttribute="trailing" constant="40" id="wwJ-kA-Kru"/>
                         </constraints>
                     </view>
@@ -100,6 +121,8 @@
                         <outlet property="humidityLabel" destination="QMK-LQ-VzW" id="71s-YA-D7G"/>
                         <outlet property="iconView" destination="YYE-w4-beR" id="dmJ-Lt-Q8E"/>
                         <outlet property="perciptationLabel" destination="LX0-J8-HV8" id="mQa-7m-fyR"/>
+                        <outlet property="refreshActivityIndicator" destination="Zn5-FQ-0kb" id="fOt-km-4z9"/>
+                        <outlet property="refreshButton" destination="Rl0-iq-9AZ" id="dMg-uR-45O"/>
                         <outlet property="summaryLabel" destination="6qx-Ws-CKa" id="o6D-Ht-701"/>
                         <outlet property="temperatureLabel" destination="jWg-rp-pvk" id="k3x-iu-l6b"/>
                     </connections>
@@ -111,6 +134,8 @@
     </scenes>
     <resources>
         <image name="cloudy-night" width="46" height="43"/>
+        <image name="degree" width="36" height="36"/>
+        <image name="refresh" width="43" height="43"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
