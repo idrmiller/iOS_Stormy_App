@@ -53,7 +53,7 @@ class ViewController: UIViewController {
                 let dataObject = NSData(contentsOfURL: location)
                 
                 // This bit of code is to help convert our dataObject to JSOn to make it readable.
-                let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as NSDictionary
+                let weatherDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as! NSDictionary
                 
                 let currentWeather = Current(weatherDictionary: weatherDictionary)
                 
