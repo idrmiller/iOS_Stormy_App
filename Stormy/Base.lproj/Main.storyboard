@@ -47,27 +47,71 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stormy and Rainy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qx-Ws-CKa">
+                                <rect key="frame" x="76" y="452" width="169" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At 05:08 AM it is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tq7-oU-G7H">
+                                <rect key="frame" x="103" y="196" width="115" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Washington, DC." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJx-Ot-hgv">
+                                <rect key="frame" x="103" y="109" width="161" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-w4-beR">
+                                <rect key="frame" x="38" y="92" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GFI-Tj-B0s"/>
+                                    <constraint firstAttribute="width" constant="60" id="Ujk-Gx-aJa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LX0-J8-HV8" firstAttribute="top" secondItem="QH7-4t-vaH" secondAttribute="bottom" constant="10" id="2tG-BR-WOP"/>
                             <constraint firstItem="BBj-hb-sxc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="CLk-RD-cdp"/>
+                            <constraint firstAttribute="centerX" secondItem="6qx-Ws-CKa" secondAttribute="centerX" constant="-0.5" id="IUS-GD-tak"/>
                             <constraint firstItem="QMK-LQ-VzW" firstAttribute="top" secondItem="BBj-hb-sxc" secondAttribute="bottom" constant="10" id="IYU-tH-tZ1"/>
+                            <constraint firstItem="YYE-w4-beR" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="LuM-hX-YRi"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6qx-Ws-CKa" secondAttribute="bottom" constant="90" id="RSp-ze-B4y"/>
                             <constraint firstItem="QMK-LQ-VzW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="47" id="U08-ID-XBZ"/>
                             <constraint firstAttribute="centerY" secondItem="jWg-rp-pvk" secondAttribute="centerY" id="X2N-rw-YUs"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BBj-hb-sxc" secondAttribute="bottom" constant="177" id="YdJ-6v-RTZ"/>
+                            <constraint firstAttribute="centerX" secondItem="tq7-oU-G7H" secondAttribute="centerX" constant="-0.5" id="fB6-Bu-OpQ"/>
+                            <constraint firstItem="kJx-Ot-hgv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="jZv-Pp-uoG"/>
+                            <constraint firstItem="kJx-Ot-hgv" firstAttribute="leading" secondItem="YYE-w4-beR" secondAttribute="trailing" constant="5" id="kbE-Hj-aOs"/>
+                            <constraint firstAttribute="centerX" secondItem="YYE-w4-beR" secondAttribute="centerX" constant="92" id="oQz-Te-1Cu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LX0-J8-HV8" secondAttribute="trailing" constant="36" id="pP8-1K-xCc"/>
                             <constraint firstAttribute="centerX" secondItem="jWg-rp-pvk" secondAttribute="centerX" constant="-0.5" id="q2t-IV-fyg"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="QH7-4t-vaH" secondAttribute="bottom" constant="177" id="vDq-zG-lse"/>
+                            <constraint firstItem="jWg-rp-pvk" firstAttribute="top" secondItem="tq7-oU-G7H" secondAttribute="bottom" constant="-17" id="w92-gh-jLD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QH7-4t-vaH" secondAttribute="trailing" constant="40" id="wwJ-kA-Kru"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="tq7-oU-G7H" id="vhq-Qa-CS9"/>
+                        <outlet property="humidityLabel" destination="QMK-LQ-VzW" id="71s-YA-D7G"/>
+                        <outlet property="iconView" destination="YYE-w4-beR" id="dmJ-Lt-Q8E"/>
+                        <outlet property="perciptationLabel" destination="LX0-J8-HV8" id="mQa-7m-fyR"/>
+                        <outlet property="summaryLabel" destination="6qx-Ws-CKa" id="o6D-Ht-701"/>
+                        <outlet property="temperatureLabel" destination="jWg-rp-pvk" id="k3x-iu-l6b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="197" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloudy-night" width="46" height="43"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
